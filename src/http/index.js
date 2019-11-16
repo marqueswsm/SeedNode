@@ -48,10 +48,6 @@ class HttpServer {
       app.use(router);
     });
 
-    app.get('/test', async (req, res) => {
-      res.status(200).send({ response: 'Success' });
-    });
-
     app.use('*', (req, res, next) => {
       next(new NotFound('Page not found'));
     });
