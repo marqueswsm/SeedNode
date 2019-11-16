@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 class UserController {
   constructor(container) {
     this.userService = container.userService;
@@ -13,7 +12,7 @@ class UserController {
 
   async list(req, res, next) {
     try {
-      res.send({ response: 'List users' });
+      res.send(await this.userService.all());
     } catch (err) {
       next(err);
     }
