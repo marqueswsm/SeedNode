@@ -1,11 +1,14 @@
 /* eslint-disable class-methods-use-this */
+const database = require('../../helpers/database');
+
 class UserModel {
   getTableName() {
     return 'users';
   }
 
   async get() {
-    return { response: 'It is working well yet' };
+    const users = await database('user').select(['id', 'name']);
+    return users;
   }
 }
 
