@@ -1,5 +1,6 @@
 const { Logger: logger } = require('./logger');
 const HttpServer = require('./http');
+const Container = require('./container');
 
 module.exports = class Application {
   constructor(config) {
@@ -12,7 +13,9 @@ module.exports = class Application {
       httpBodyLimit,
     } = this.config;
 
-    this.httpServer = new HttpServer({
+    const container = new Container();
+
+    this.httpServer = new HttpServer(container, {
       port: httpPort,
       bodyLimit: httpBodyLimit,
     });
