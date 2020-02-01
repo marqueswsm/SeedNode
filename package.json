@@ -22,5 +22,8 @@
   "homepage": "https://github.com/marqueswsm/seed-node#readme",
   "devDependencies": {
     "redoc-cli": "^0.9.5"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
   }
 }
