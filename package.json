@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/marqueswsm/seed-node/issues"
   },
-  "homepage": "https://github.com/marqueswsm/seed-node#readme"
+  "homepage": "https://github.com/marqueswsm/seed-node#readme",
+  "devDependencies": {
+    "redoc-cli": "^0.9.5"
+  }
 }
