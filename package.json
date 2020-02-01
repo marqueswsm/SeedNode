@@ -1,0 +1,23 @@
+{
+  "name": "seed-node",
+  "version": "1.0.0",
+  "description": "This project aims to provide a complete seed to allow the development of an API using NodeJS. However, it is in development yet.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marqueswsm/seed-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marqueswsm/seed-node/issues"
+  },
+  "homepage": "https://github.com/marqueswsm/seed-node#readme"
+}
