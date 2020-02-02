@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/marqueswsm/seed-node#readme",
   "devDependencies": {
+    "nodemon": "^2.0.2",
     "redoc-cli": "^0.9.5"
   },
   "dependencies": {
