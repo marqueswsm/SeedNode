@@ -2,9 +2,9 @@ const env = require('./env');
 const http = require('./http');
 const { logger } = require('./logger');
 
+/* start service */
 setImmediate(() => {
   const server = http.listen(env.PORT, () => {
-    logger.info(('http.started', env.PORT));
     process.send('ready');
   });
 
@@ -13,6 +13,9 @@ setImmediate(() => {
       process.exit(0);
     });
   };
+
+  /* process handler */
+  process.stdin.resume();
   process.on('SIGINT', onExitProcess);
   process.on('SIGTERM', onExitProcess);
 

@@ -2,15 +2,17 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const app = express();
-
-app.use(cors);
-app.use(bodyParser.json());
-
 /* Routes */
 const referenceRoute = require('./routes/reference');
 
-/* Instantiate */
+/* Express initialization */
+const app = express();
+
+/* Express utilites */
+app.use(cors());
+app.use(bodyParser.json());
+
+/* Instatiate routes */
 app.use('/reference', referenceRoute);
 
 /* Status endpoint */
