@@ -1,9 +1,22 @@
-const express = require('express');
+const env = require('./env');
+const http = require('./http');
+const { logger } = require('./logger');
 
-const app = express();
+setImmediate(() => {
+  const server = http.listen(env.PORT, () => {
+    logger.info(('http.started', env.PORT));
+    process.send('ready');
+  });
 
-app.get('/', async (req, res) => {
-  res.send('Seed Node');
+  const onExitProcess = () => {
+    server.close(() => {
+      process.exit(0);
+    });
+  };
+  process.on('SIGINT', onExitProcess);
+  process.on('SIGTERM', onExitProcess);
+
+  process.on('unhandledRejection', (reason, promise) => {
+    logger.error(`Unhandled rejection (reason=${reason}, promise=${promise}`);
+  });
 });
-
-app.listen(3000);

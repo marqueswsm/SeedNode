@@ -5,5 +5,5 @@ module.exports = {
   DB_NAME: process.DB_NAME,
   DB_PORT: process.DB_PORT,
 
-  PORT: parseInt(process.PORT, 10),
+  PORT: parseInt(process.PORT, 10) || 3000,
 };
