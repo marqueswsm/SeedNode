@@ -1,9 +1,11 @@
 const express = require('express');
+const referenceController = require('../controllers/referenceController');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.status(200).json({ seed: 'It is working well' });
-});
+router.get(
+  '/',
+  referenceController.create,
+);
 
 module.exports = router;
