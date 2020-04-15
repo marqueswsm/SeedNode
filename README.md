@@ -7,6 +7,7 @@ Este projeto está sendo desenvolvido para ser utilizado como seed em projetos q
 A documentação do seed foi desenvolvida utilizando o [Swagger](https://swagger.io). O Swagger facilita o design da API, com diversas ferramentas voltadas à desenvolvedores, arquitetos e proprietários de produtos. Para visualizar a referida documentação, execute a instrução a seguir e logo após acesse `http://localhost:8080`:
 
 ```bash
+$ sudo npm install redoc-cli -g
 $ redoc-cli serve docs/swagger.yml --watch
 ```
 
