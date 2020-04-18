@@ -1,9 +1,9 @@
-const knex = require('knex');
-const knexfile = require('../../knexfile');
+// const knex = require('knex');
+// const knexfile = require('../../knexfile');
 
 const ReferenceService = require('./services/referenceService');
 
-const database = knex(knexfile);
+// const database = knex(knexfile);
 
 module.exports = {
   referenceService: ReferenceService,
