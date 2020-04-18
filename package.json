@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "migrate:create": "./node_modules/knex/bin/cli.js migrate:make $MIGRATE_NAME --env local",
+    "migrate:up": "./node_modules/knex/bin/cli.js migrate:latest --env local"
   },
   "repository": {
     "type": "git",
