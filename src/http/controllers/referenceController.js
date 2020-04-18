@@ -1,7 +1,10 @@
 /* eslint-disable class-methods-use-this */
+const { referenceService } = require('../../container');
+
 class ReferenceController {
   async create(req, res) {
-    res.json(req);
+    const response = await referenceService.create(req.body);
+    res.send(response);
   }
 }
 

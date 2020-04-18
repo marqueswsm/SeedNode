@@ -3,7 +3,7 @@ const referenceController = require('../controllers/referenceController');
 
 const router = express.Router();
 
-router.get(
+router.post(
   '/',
   referenceController.create,
 );
