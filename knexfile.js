@@ -6,7 +6,7 @@ module.exports = {
     host: env.DB_HOST,
     user: env.DB_USERNAME,
     password: env.DB_PASSWORD,
-    database: env.DB_DATABASE,
+    database: env.DB_NAME,
   },
   migrations: {
     tableName: 'migrations',

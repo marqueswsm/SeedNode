@@ -9,7 +9,9 @@
   "scripts": {
     "dev": "nodemon ./src/index.js",
     "migrate:create": "./node_modules/knex/bin/cli.js migrate:make $MIGRATE_NAME --env local",
-    "migrate:up": "./node_modules/knex/bin/cli.js migrate:latest --env local"
+    "migrate:up": "./node_modules/knex/bin/cli.js migrate:latest",
+    "migrate:rollback": "./node_modules/knex/bin/cli.js migrate:rollback",
+    "migrate:rollback:all": "./node_modules/knex/bin/cli.js migrate:rollback --all"
   },
   "repository": {
     "type": "git",
