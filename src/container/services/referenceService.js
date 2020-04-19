@@ -1,13 +1,10 @@
-/* eslint-disable class-methods-use-this */
-const ReferenceModel = require('../models/referenceModel');
-
 class ReferenceService {
   constructor(context) {
-    this.database = context.database;
+    this.referenceModel = context.ReferenceModel;
   }
 
   async create(data) {
-    const response = await ReferenceModel.create(data);
+    const response = await this.referenceModel.create(data);
     return response;
   }
 }
