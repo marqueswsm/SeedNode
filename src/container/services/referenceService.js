@@ -2,10 +2,14 @@
 const ReferenceModel = require('../models/referenceModel');
 
 class ReferenceService {
+  constructor(context) {
+    this.database = context.database;
+  }
+
   async create(data) {
     const response = await ReferenceModel.create(data);
     return response;
   }
 }
 
-module.exports = new ReferenceService();
+module.exports = ReferenceService;

@@ -1,7 +1,11 @@
 /* eslint-disable class-methods-use-this */
 class ReferenceModel {
+  constructor(database) {
+    this.database = database;
+  }
+
   create(data) {
-    return data;
+    this.database.table('reference').insert(data);
   }
 }
 
