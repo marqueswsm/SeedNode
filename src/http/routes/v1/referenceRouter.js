@@ -10,3 +10,5 @@ router.route('/')
   .post(
     controller.create.bind(controller),
   );
+
+module.exports = router;
