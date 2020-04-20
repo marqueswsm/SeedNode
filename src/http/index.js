@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 /* Routes */
-const referenceRoute = require('./routes/referenceRoute');
+const Routes = require('./routes');
 
 /* Express initialization */
 const app = express();
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 /* Instatiate routes */
-app.use('/reference', referenceRoute);
+app.use('/v1', Routes.v1);
 
 /* Status endpoint */
 app.get(['/info', '/status'], async (req, res, next) => {
