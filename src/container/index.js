@@ -3,15 +3,13 @@ const ReferenceService = require('./services/referenceService');
 const database = require('../helpers/database');
 
 const models = {
-  referenceModel: new ReferenceModel(database),
-};
-
-const serviceContext = {
-  ...models,
+  referenceModel: new ReferenceModel({ database }),
 };
 
 const services = {
-  referenceService: new ReferenceService(serviceContext),
+  referenceService: new ReferenceService({
+    ...models,
+  }),
 };
 
 const container = {

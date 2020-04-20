@@ -1,6 +1,6 @@
 class ReferenceService {
   constructor(context) {
-    this.referenceModel = context.ReferenceModel;
+    this.referenceModel = context.referenceModel;
   }
 
   async create(data) {

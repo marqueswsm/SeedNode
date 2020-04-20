@@ -1,5 +1,4 @@
-/* eslint-disable class-methods-use-this */
-const Uuid = require('uuid/v4');
+const { v4: uuidv4 } = require('uuid');
 
 class ReferenceModel {
   constructor(database) {
@@ -7,9 +6,9 @@ class ReferenceModel {
   }
 
   create(data) {
-    const id = Uuid();
-    return this.database('reference')
-      .returning('id').insert({ ...data, id });
+    const id = uuidv4();
+    return this.database
+      .insert({ ...data, id });
   }
 }
 
