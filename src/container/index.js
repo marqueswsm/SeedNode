@@ -3,7 +3,7 @@ const ReferenceService = require('./services/referenceService');
 const database = require('../helpers/database');
 
 const models = {
-  referenceModel: new ReferenceModel({ database }),
+  referenceModel: new ReferenceModel(database),
 };
 
 const services = {

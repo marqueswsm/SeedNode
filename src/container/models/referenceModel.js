@@ -7,8 +7,9 @@ class ReferenceModel {
 
   create(data) {
     const id = uuidv4();
-    return this.database
-      .insert({ ...data, id });
+    return this.database('reference')
+      .insert({ ...data, id })
+      .then(() => ({ id }));
   }
 }
 
