@@ -16,7 +16,12 @@ class ReferenceController {
   async getById(req, res) {
     const { id } = req.params;
     const response = await this.referenceService.getById(id);
-    res.status(200).send(response);
+
+    if (!response) {
+      return res.sendStatus(204);
+    }
+
+    return res.status(200).send(response);
   }
 
   async update(req, res) {
