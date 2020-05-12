@@ -17,6 +17,14 @@ class ReferenceService {
     const response = await this.referenceModel.getById(id);
     return response;
   }
+
+  async update(id, data) {
+    await this.referenceModel.update(id, data);
+  }
+
+  async delete(id) {
+    await this.referenceModel.delete(id);
+  }
 }
 
 module.exports = ReferenceService;

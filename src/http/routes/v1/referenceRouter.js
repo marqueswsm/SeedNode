@@ -17,6 +17,12 @@ router.route('/')
 router.route('/:id')
   .get(
     controller.getById.bind(controller),
+  )
+  .patch(
+    controller.update.bind(controller),
+  )
+  .delete(
+    controller.delete.bind(controller),
   );
 
 module.exports = router;

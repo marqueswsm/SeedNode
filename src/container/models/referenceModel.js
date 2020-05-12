@@ -25,6 +25,18 @@ class ReferenceModel {
       .first();
     return response;
   }
+
+  async update(id, data) {
+    await this.database('reference')
+      .update({ ...data })
+      .where({ id });
+  }
+
+  async delete(id) {
+    await this.database('reference')
+      .delete()
+      .where({ id });
+  }
 }
 
 module.exports = ReferenceModel;

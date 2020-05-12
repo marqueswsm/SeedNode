@@ -18,6 +18,20 @@ class ReferenceController {
     const response = await this.referenceService.getById(id);
     res.status(200).send(response);
   }
+
+  async update(req, res) {
+    const { id } = req.params;
+    const data = req.body;
+
+    await this.referenceService.update(id, data);
+    res.sendStatus(204);
+  }
+
+  async delete(req, res) {
+    const { id } = req.params;
+    await this.referenceService.delete(id);
+    res.sendStatus(204);
+  }
 }
 
 module.exports = ReferenceController;
