@@ -5,11 +5,11 @@ class ReferenceModel {
     this.database = database;
   }
 
-  create(data) {
+  async create(data) {
     const id = uuidv4();
-    return this.database('reference')
-      .insert({ ...data, id })
-      .then(() => ({ id }));
+    await this.database('reference')
+      .insert({ ...data, id });
+    return { id };
   }
 
   async get() {
