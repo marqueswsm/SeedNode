@@ -12,6 +12,11 @@ class ReferenceService {
     const response = await this.referenceModel.get();
     return response;
   }
+
+  async getById(id) {
+    const response = await this.referenceModel.getById(id);
+    return response;
+  }
 }
 
 module.exports = ReferenceService;

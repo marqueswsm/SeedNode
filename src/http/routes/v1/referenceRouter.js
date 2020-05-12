@@ -14,4 +14,9 @@ router.route('/')
     controller.get.bind(controller),
   );
 
+router.route('/:id')
+  .get(
+    controller.getById.bind(controller),
+  );
+
 module.exports = router;

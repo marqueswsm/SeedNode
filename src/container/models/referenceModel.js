@@ -17,6 +17,14 @@ class ReferenceModel {
       .select('*');
     return response;
   }
+
+  async getById(id) {
+    const response = await this.database('reference')
+      .select('*')
+      .where({ id })
+      .first();
+    return response;
+  }
 }
 
 module.exports = ReferenceModel;
