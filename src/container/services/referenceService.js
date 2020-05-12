@@ -7,6 +7,11 @@ class ReferenceService {
     const response = await this.referenceModel.create(data);
     return response;
   }
+
+  async get() {
+    const response = await this.referenceModel.get();
+    return response;
+  }
 }
 
 module.exports = ReferenceService;

@@ -11,6 +11,12 @@ class ReferenceModel {
       .insert({ ...data, id })
       .then(() => ({ id }));
   }
+
+  async get() {
+    const response = await this.database('reference')
+      .select('*');
+    return response;
+  }
 }
 
 module.exports = ReferenceModel;
