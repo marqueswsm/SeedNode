@@ -12,9 +12,10 @@ class ReferenceModel {
     return { id };
   }
 
-  async get() {
+  async get(year) {
     const response = await this.database('reference')
-      .select('*');
+      .select('*')
+      .where(year);
     return response;
   }
 

@@ -8,8 +8,8 @@ class ReferenceService {
     return response;
   }
 
-  async get() {
-    const response = await this.referenceModel.get();
+  async get(year) {
+    const response = await this.referenceModel.get(year);
     return response;
   }
 

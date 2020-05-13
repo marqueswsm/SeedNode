@@ -9,7 +9,8 @@ class ReferenceController {
   }
 
   async get(req, res) {
-    const response = await this.referenceService.get(req.body);
+    const { year } = req.query;
+    const response = await this.referenceService.get(year);
     res.status(200).send(response);
   }
 
