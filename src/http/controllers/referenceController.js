@@ -11,7 +11,12 @@ class ReferenceController {
   async get(req, res) {
     const { year } = req.query;
     const response = await this.referenceService.get(year);
-    res.status(200).send(response);
+
+    if (!response) {
+      return res.sendStatus(204);
+    }
+
+    return res.status(200).send(response);
   }
 
   async getById(req, res) {
