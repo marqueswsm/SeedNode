@@ -3,19 +3,16 @@ class ReferenceService {
     this.referenceModel = context.referenceModel;
   }
 
-  async create(data) {
-    const response = await this.referenceModel.create(data);
-    return response;
+  create(data) {
+    return this.referenceModel.create(data);
   }
 
-  async get(year) {
-    const response = await this.referenceModel.get(year);
-    return response;
+  get(year) {
+    return this.referenceModel.get(year);
   }
 
-  async getById(id) {
-    const response = await this.referenceModel.getById(id);
-    return response;
+  getById(id) {
+    return this.referenceModel.getById(id);
   }
 
   async update(id, data) {

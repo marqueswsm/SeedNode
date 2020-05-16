@@ -12,29 +12,31 @@ class ReferenceModel {
     return { id };
   }
 
-  async get(year) {
-    const response = await this.database('reference')
+  get(year) {
+    return this.database('reference')
       .select('*')
-      .where(year);
-    return response;
+      .modify((queryBuilder) => {
+        if (year) {
+          queryBuilder.where('year', year);
+        }
+      });
   }
 
-  async getById(id) {
-    const response = await this.database('reference')
+  getById(id) {
+    return this.database('reference')
       .select('*')
       .where({ id })
       .first();
-    return response;
   }
 
-  async update(id, data) {
-    await this.database('reference')
+  update(id, data) {
+    this.database('reference')
       .update({ ...data })
       .where({ id });
   }
 
-  async delete(id) {
-    await this.database('reference')
+  delete(id) {
+    this.database('reference')
       .delete()
       .where({ id });
   }
