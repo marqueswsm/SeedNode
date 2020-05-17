@@ -15,12 +15,12 @@ class ReferenceService {
     return this.referenceModel.getById(id);
   }
 
-  async update(id, data) {
-    await this.referenceModel.update(id, data);
+  update(id, data) {
+    return this.referenceModel.update(id, data);
   }
 
-  async delete(id) {
-    await this.referenceModel.delete(id);
+  delete(id) {
+    return this.referenceModel.delete(id);
   }
 }
 
