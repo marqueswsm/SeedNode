@@ -30,13 +30,13 @@ class ReferenceModel {
   }
 
   update(id, data) {
-    this.database('reference')
+    return this.database('reference')
       .update({ ...data })
       .where({ id });
   }
 
   delete(id) {
-    this.database('reference')
+    return this.database('reference')
       .delete()
       .where({ id });
   }
