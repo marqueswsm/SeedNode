@@ -8,4 +8,5 @@ module.exports = {
   DB_PASSWORD: process.env.DB_PASSWORD,
 
   PORT: parseInt(process.env.PORT, 10),
+  BODY_LIMIT: process.env.BODY_LIMIT || '10kb',
 };

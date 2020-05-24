@@ -1,25 +1,14 @@
-const env = require('./env');
-const http = require('./http');
+const Application = require('./app');
 const { logger } = require('./logger');
+const env = require('./env');
 
 /* start service */
-setImmediate(() => {
-  const server = http.listen(env.PORT, () => {
-    process.send('ready');
+setImmediate(async () => {
+  const application = new Application({
+    httpPort: env.PORT,
+    httpBodyLimit: env.BODY_LIMIT,
   });
 
-  const onExitProcess = () => {
-    server.close(() => {
-      process.exit(0);
-    });
-  };
-
-  /* process handler */
-  process.stdin.resume();
-  process.on('SIGINT', onExitProcess);
-  process.on('SIGTERM', onExitProcess);
-
-  process.on('unhandledRejection', (reason, promise) => {
-    logger.error(`Unhandled rejection (reason=${reason}, promise=${promise}`);
-  });
+  await application.start();
+  logger.info('Application started');
 });
