@@ -16,14 +16,15 @@ class ReferenceController {
 
   async get(req, res, next) {
     try {
+      let status = 200;
       const { year } = req.query;
       const response = await this.referenceService.get(year);
 
       if (!response) {
-        return res.sendStatus(204);
+        status = 204;
       }
 
-      return res.status(200).send(response);
+      res.status(status).send(response);
     } catch (error) {
       next(error);
     }
@@ -31,14 +32,15 @@ class ReferenceController {
 
   async getById(req, res, next) {
     try {
+      let status = 200;
       const { id } = req.params;
       const response = await this.referenceService.getById(id);
 
       if (!response) {
-        return res.sendStatus(204);
+        status = 204;
       }
 
-      return res.status(200).send(response);
+      res.status(status).send(response);
     } catch (error) {
       next(error);
     }
