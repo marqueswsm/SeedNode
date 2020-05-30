@@ -10,7 +10,7 @@ class ReferenceController {
       const response = await this.referenceService.create(req.body);
       res.status(201).send(response);
     } catch (error) {
-      next(error)
+      next(error);
     }
   }
 
@@ -18,14 +18,14 @@ class ReferenceController {
     try {
       const { year } = req.query;
       const response = await this.referenceService.get(year);
-  
+
       if (!response) {
         return res.sendStatus(204);
       }
-  
+
       return res.status(200).send(response);
     } catch (error) {
-      next(error)
+      next(error);
     }
   }
 
@@ -33,11 +33,11 @@ class ReferenceController {
     try {
       const { id } = req.params;
       const response = await this.referenceService.getById(id);
-  
+
       if (!response) {
         return res.sendStatus(204);
       }
-  
+
       return res.status(200).send(response);
     } catch (error) {
       next(error);
@@ -49,16 +49,16 @@ class ReferenceController {
       const { id } = req.params;
 
       const reference = await this.referenceService.getById(id);
-      if(!reference) {
+      if (!reference) {
         throw new BadRequest('Reference not found');
-      };
+      }
 
       const data = req.body;
-  
+
       await this.referenceService.update(id, data);
       res.sendStatus(204);
     } catch (error) {
-      next(error)
+      next(error);
     }
   }
 
