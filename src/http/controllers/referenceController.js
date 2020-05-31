@@ -70,7 +70,7 @@ class ReferenceController {
       await this.referenceService.delete(id);
       res.sendStatus(204);
     } catch (error) {
-      next(error)
+      next(error);
     }
   }
 }
