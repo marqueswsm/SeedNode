@@ -19,6 +19,19 @@ describe('Reference schema unit tests', () => {
       expect(error).toEqual(undefined);
     });
 
+    it('should be accepted when we not send description (it is optional)', () => {
+      const reference = {
+        body: {
+          citation: chance.string({ length: 200 }),
+          year: chance.year(),
+          bibtex: chance.string({ alpha: true }),
+        },
+      };
+
+      const { error } = schemas.createReference.validate(reference);
+      expect(error).toEqual(undefined);
+    });
+
     it('should return error if citation is not sent', () => {
       const reference = {
         body: {
