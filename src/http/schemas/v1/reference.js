@@ -17,13 +17,13 @@ const getReferences = joi.object({
 
 const getReferenceById = joi.object({
   params: joi.object({
-    referenceId: joi.string().required(),
+    id: joi.string().required(),
   }),
 });
 
 const updateReference = joi.object({
   params: joi.object({
-    referenceId: joi.string().required(),
+    id: joi.string().required(),
   }),
   body: joi.object({
     description: joi.string(),
@@ -35,7 +35,7 @@ const updateReference = joi.object({
 
 const deleteReference = joi.object({
   params: joi.object({
-    referenceId: joi.string().required(),
+    id: joi.string().required(),
   }),
 });
 
