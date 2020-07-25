@@ -51,6 +51,7 @@ class ReferenceController {
       const { id } = req.params;
 
       const reference = await this.referenceService.getById(id);
+
       if (!reference) {
         throw new BadRequest('Reference not found');
       }
@@ -67,6 +68,12 @@ class ReferenceController {
   async delete(req, res, next) {
     try {
       const { id } = req.params;
+      const reference = await this.referenceService.getById(id);
+
+      if (!reference) {
+        throw new BadRequest('Reference not found');
+      }
+
       await this.referenceService.delete(id);
       res.sendStatus(204);
     } catch (error) {
