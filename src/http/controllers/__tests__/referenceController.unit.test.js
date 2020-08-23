@@ -481,7 +481,7 @@ describe('Reference controller unit tests', () => {
     });
   });
 
-  describe('#describe', () => {
+  describe('#delete', () => {
     const chance = new Chance();
     it('should call service.getById with an id', async () => {
       const request = new Request();
