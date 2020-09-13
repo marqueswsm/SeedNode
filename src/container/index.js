@@ -1,5 +1,5 @@
-const ReferenceModel = require('./models/referenceModel');
-const ReferenceService = require('./services/referenceService');
+const ReferenceModel = require('./models/reference');
+const ReferenceService = require('./services/reference');
 const database = require('../helpers/database');
 
 const models = {
