@@ -1,4 +1,4 @@
-class ReferenceService {
+class Reference {
   constructor(context) {
     this.referenceModel = context.referenceModel;
   }
@@ -6,22 +6,6 @@ class ReferenceService {
   create(data) {
     return this.referenceModel.create(data);
   }
-
-  get(year) {
-    return this.referenceModel.get(year);
-  }
-
-  getById(id) {
-    return this.referenceModel.getById(id);
-  }
-
-  update(id, data) {
-    return this.referenceModel.update(id, data);
-  }
-
-  delete(id) {
-    return this.referenceModel.delete(id);
-  }
 }
 
-module.exports = ReferenceService;
+module.exports = Reference;
