@@ -1,8 +1,8 @@
 const express = require('express');
-const ReferenceRouter = require('./referenceRouter');
+const Reference = require('./reference');
 
 const router = express.Router();
 
-router.use('/reference', ReferenceRouter);
+router.use('/reference', Reference);
 
 module.exports = router;
