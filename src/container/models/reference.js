@@ -8,9 +8,10 @@ class Reference {
   async create(data) {
     const id = uuidV4();
 
-    return this.database('reference')
-      .insert({ ...data, id })
-      .then(() => ({ id }));
+    await this.database('reference')
+      .insert({ ...data, id });
+
+    return { id };
   }
 }
 
