@@ -11,7 +11,9 @@ describe('Reference model unit tests', () => {
         insert: jest.fn().mockReturnThis(),
       }));
 
-      const referenceModel = new Reference(fakeDatabase);
+      const referenceModel = new Reference({
+        database: fakeDatabase,
+      });
 
       const reference = {
         description: chance.string({ length: 30 }),
@@ -32,7 +34,9 @@ describe('Reference model unit tests', () => {
 
       const fakeDatabase = jest.fn(() => fakeQuery);
 
-      const referenceModel = new Reference(fakeDatabase);
+      const referenceModel = new Reference({
+        database: fakeDatabase,
+      });
 
       const reference = {
         description: chance.string({ length: 30 }),
@@ -56,7 +60,9 @@ describe('Reference model unit tests', () => {
 
       const fakeDatabase = jest.fn(() => fakeQuery);
 
-      const referenceModel = new Reference(fakeDatabase);
+      const referenceModel = new Reference({
+        database: fakeDatabase,
+      });
 
       const reference = {
         description: chance.string({ length: 30 }),
@@ -79,7 +85,9 @@ describe('Reference model unit tests', () => {
 
       const fakeDatabase = jest.fn(() => fakeQuery);
 
-      const referenceModel = new Reference(fakeDatabase);
+      const referenceModel = new Reference({
+        database: fakeDatabase,
+      });
 
       const reference = {
         description: chance.string({ length: 30 }),
