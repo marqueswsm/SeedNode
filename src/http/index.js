@@ -16,9 +16,6 @@ class HttpServer {
   start() {
     this.app.use(cors());
     this.app.use(bodyParser.json());
-    this.app.use(bodyParser.json({
-      limit: this.bodyLimit,
-    }));
 
     /* Instatiate routes */
     this.app.use('/v1', Routes.v1);

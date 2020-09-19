@@ -10,7 +10,7 @@ const errorHandler = (err, req, res, _next) => {
 
   return res
     .status(status)
-    .send(JSON.stringify(err));
+    .send(err);
 };
 
 module.exports = errorHandler;
