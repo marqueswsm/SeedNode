@@ -1,6 +1,6 @@
 # Seed Node JS 
 
-This application was developed to be used as a template for NodeJS APIs. It includes a simple app that allows you to perform bibliographic references management. It uses jest for tests, mysql as database, and express as the framework. Any contribution is Wellcome. I hope it helps new developers to start their apps. If you will create a big application with several interfaces (i.e., http and amqp protocols) I really recommend you use Hexagonal Architecture with typescript. I will create a new template with this approach soon. 
+This application was developed to be used as a template for NodeJS APIs. It includes a simple app that allows you to perform bibliographic references management. It uses jest, mysql, and express. Any contribution is Wellcome. I hope it helps new developers to start their apps. If you will create a big application with several interfaces (i.e., http and amqp protocols) I really recommend you use Hexagonal Architecture with typescript. I will create a new template with this approach soon. 
 
 ## Architecture
 
