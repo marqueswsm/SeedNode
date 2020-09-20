@@ -1,6 +1,6 @@
 # Seed Node JS 
 
-This application was developed to be used as a template for NodeJS APIs. It includes a simple app that allows you to perform bibliographic references management. It uses jest, mysql, and express. Any contribution is Wellcome. I hope it helps new developers to start their apps. If you will create a big application with several interfaces (i.e., http and amqp protocols) I really recommend you use Hexagonal Architecture with typescript. I will create a new template with this approach soon. 
+This application was developed to be used as a template for NodeJS APIs. It includes a simple app that allows you to perform bibliographic references management. It uses jest, mysql, and express. Any contribution is Wellcome. I hope it helps new developers to start their apps. If you will create a big application with several interfaces (i.e., http and amqp protocols) I really recommend to use Hexagonal Architecture with typescript. I will create a new template with this approach soon. 
 
 ## Architecture
 
@@ -70,7 +70,7 @@ Firstly, we should clone the repository:
 git clone https://github.com/marqueswsm/seed-node.git
 ```
 
-Then, it is necessary to create a copy of the file called `.env.sample` and rename it to `.env`. It will provide some environment variables that our app needs to run properly. You can now set your database information. I recommend you to use Docker to exec a mysql database. If you have docker installed, execute:
+Then, it is necessary to create a copy of the file called `.env.sample` and rename it to `.env`. It will provide some environment variables that our app needs to run properly. You can now set your database information. I recommend to use Docker to exec a mysql database. If you have docker installed, execute:
 ```bash
 docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_ROOT_HOST=% -d mysql/mysql-server:5.7
 ```
