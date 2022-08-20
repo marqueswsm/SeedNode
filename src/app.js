@@ -1,6 +1,4 @@
 const express = require('express');
-
-const { logger } = require('./logger');
 const HttpServer = require('./http');
 
 class Application {
@@ -23,7 +21,6 @@ class Application {
     });
 
     httpServer.start();
-    logger.info('Http server started');
   }
 }
 

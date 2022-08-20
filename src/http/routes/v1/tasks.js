@@ -1,15 +1,15 @@
 const express = require('express');
 
 const container = require('../../../container');
-const ReferenceController = require('../../controllers/reference');
+const TaskController = require('../../controllers/tasks');
 const validateMiddleware = require('../../middlewares/validator');
 const {
   createReference,
-} = require('../../schemas/v1/reference');
+} = require('../../schemas/v1/task');
 
 const router = express.Router();
 
-const controller = new ReferenceController(container);
+const controller = new TaskController(container);
 
 router.route('/')
   .post(

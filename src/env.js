@@ -6,7 +6,5 @@ module.exports = {
   DB_PORT: process.env.DB_PORT,
   DB_USERNAME: process.env.DB_USERNAME,
   DB_PASSWORD: process.env.DB_PASSWORD,
-
-  PORT: parseInt(process.env.PORT, 10),
-  BODY_LIMIT: process.env.BODY_LIMIT || '10kb',
+  PORT: process.env.PORT,
 };

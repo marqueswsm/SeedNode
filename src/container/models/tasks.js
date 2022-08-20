@@ -1,6 +1,6 @@
 const { v4: uuidV4 } = require('uuid');
 
-class Reference {
+class Task {
   constructor(context) {
     this.database = context.database;
   }
@@ -8,11 +8,11 @@ class Reference {
   async create(data) {
     const id = uuidV4();
 
-    await this.database('reference')
+    await this.database('task')
       .insert({ ...data, id });
 
     return { id };
   }
 }
 
-module.exports = Reference;
+module.exports = Task;

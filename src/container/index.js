@@ -1,15 +1,15 @@
-const ReferenceModel = require('./models/reference');
-const ReferenceService = require('./services/reference');
+const TaskModel = require('./models/tasks');
+const TaskService = require('./services/tasks');
 const database = require('../helpers/database');
 
 const models = {
-  referenceModel: new ReferenceModel({
+  taskModel: new TaskModel({
     database,
   }),
 };
 
 const services = {
-  referenceService: new ReferenceService(models),
+  taskService: new TaskService(models),
 };
 
 const container = services;
